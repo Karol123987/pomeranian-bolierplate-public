@@ -2,9 +2,9 @@ import { Exercise } from './index';
 
 export const blockRouterMetaData = {
   path: 'js-numbers',
-  date: null,
+  date: '21-05-2023',
   linkLabel: 'Numbers w JS',
   blockNo: 18,
   element: <Exercise />,
-  tags: ['bumbers', 'js', 'int', 'float'],
+  tags: ['numbers', 'js', 'int', 'float'],
 };
