@@ -38,6 +38,50 @@ export function Exercise() {
   // negacja
   // const notValid = !isValid;
 
+  // if (x == 5) {
+  // // console.log(magia)
+  // } else if (x == 15){
+  // // console.log(brak magii)
+  // } else {
+  // // console.log('inna wartość niż')
+  // }
+
+  // if (x > 5) {
+  // // console.log(magia)
+  // } else {
+  // // console.log('brak magii')
+  // }
+
+  // (x > 5) ? console.log('większe od 5') : console.log('mniejsze lub równe 5')
+
+  // CONDITIONAL (TERNARY) OPERATOR
+  // (x > 5)
+  // ? ((x == 7)
+  // ? console.log ('7')
+  // : console.log('większe od 5'))
+  // : console.log('mniejsze lub równe 5')
+
+  // if (x) {
+  //   if (y) {
+  //     if (z) {
+  //       if (w) {
+  //       }
+  //     }
+  //   }
+  // }
+
+  // SWITCH;
+  // switch (x) {
+  //   case 5:
+  //     console.log('5!');
+  //     break;
+  //   case 6:
+  //     console.log('6!');
+  //     break;
+  //   default:
+  //     console.log('inna wartość!');
+  // }
+
   return (
     <>
       {isValid && (
