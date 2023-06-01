@@ -1,4 +1,5 @@
 import './styles.css';
+import React from 'react';
 
 export function Exercise() {
   // ZADANIE 1 (SORTOWANIE TABLICY)
@@ -138,5 +139,26 @@ export function Exercise() {
   const countNotANumber = ZliczWystapienia('nie liczba');
   console.log(countNotANumber(1, 1, 2, 3, 5, 7, 8, 1));
 
-  return <div>Funkcje w JS</div>;
+  return (
+    <div>
+      Funkcje w JS
+      <div>{orginalArr.join('-')}</div>
+      <div>{sortedArr.join('-')}</div>
+      <div>
+        {'originalObject: ' +
+          originalObject.name +
+          ' ' +
+          originalObject.surname}
+      </div>
+      <div>
+        {'changedObject: ' + changedObject.name + ' ' + changedObject.surname}
+        <br />
+        {'ZAD 5 ---> ' + sumOfParam(1, 2, 3, 4, 5, 6)}
+        <br />
+        {Object.entries(originalObject).map(([key, value]) => (
+          <p key={key}>{`${key}: ${value}`}</p>
+        ))}
+      </div>
+    </div>
+  );
 }
