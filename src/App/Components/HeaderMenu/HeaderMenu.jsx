@@ -1,57 +1,30 @@
 import './styles.css';
+import { useState } from 'react';
 import { SettingIcon } from '../Icons/SettingIcon';
 import { MenuArrow } from '../Icons/MenuArrow';
-import { useState } from 'react';
+import { RightCornerMenuPopup } from '../RightCornerMenuPopup/RightCornerMenuPopup';
 
-export function HeaderMenu() {
+export const HeaderMenu = () => {
+  const [isArrowClicked, setArrowClicked] = useState(false);
+
+  function clickArrowInHeaderMenu() {
+    setArrowClicked(!isArrowClicked);
+  }
   return (
-    <div class="images-container">
+    <div className="images-container">
       <SettingIcon />
-      {/* todo <RoundImage /> */}
-      <div class="circular_image">
-        <img src="http://placekitten.com/500/500" />
+      <div className="circular_image">
+        <img src="http://placekitten.com/500/500" alt="kitty" />
       </div>
-      <div className="images-container-name">
+      <div className="person-container">
         <h4>Karol Prusek</h4>
-        <h5>Kursant</h5>
+        <h5>kursant</h5>
       </div>
-      <MenuArrow className="menu-arrow" />
+
+      <button onClick={clickArrowInHeaderMenu} className="header-button-arrow">
+        <MenuArrow className="menu-arrow" />
+      </button>
+      {isArrowClicked && <RightCornerMenuPopup />}
     </div>
   );
-}
-
-// export const HeaderMenu = (props) => {
-//   const { buttonMenu, paragraphMenu, spanMenu } = props;
-
-//   const [isArrowClicked, setArrowCliced] = useState(false);
-
-//   function clickArrowClicked() {
-//     setArrowCliced(!isArrowClicked);
-//   }
-
-//   return (
-//     <div className="images-container">
-//       <SettingIcon />
-//       {/* todo <RoundImage /> */}
-//       <div class="circular_image">
-//         <img src="http://placekitten.com/500/500" />
-//       </div>
-//       <div className="images-container-name">
-//         <h4>Karol Prusek</h4>
-//         <h5>Kursant</h5>
-//       </div>
-//       <button onClick={clickArrowInHeaderMenu} className="header-button-arrow">
-//         <MenuArrow className="menu-arrow" />
-//       </button>
-//       {isArrowClicked && (
-//         <div className="header-hidingdiv">
-//           <button className="header-button-log-in">Zaloguj się</button>
-//           <p className="header-question">
-//             Nie masz konta?
-//             <span className="header-button-register">Zarejstuj się</span>
-//           </p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+};
