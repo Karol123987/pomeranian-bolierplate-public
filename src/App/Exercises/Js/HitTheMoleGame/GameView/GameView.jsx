@@ -15,7 +15,7 @@ export const GameView = ({
       time > 0 && setTime(time - 1);
     }, 1000);
     return () => clearTimeout(timeoutId);
-  }, [time]);
+  }, [time, setTime]);
 
   return (
     <>
