@@ -13,6 +13,8 @@ import { MenuView } from './MenuView/MenuView';
 export function HitTheMoleGame() {
   const [isGameStarted, setGameStarted] = useState(false);
   const [score, setScore] = useState(0);
+  const [time, setTime] = useState(60);
+
   return (
     <div className="hit-the-mole">
       <h4>Hit The Mole</h4>
@@ -26,9 +28,11 @@ export function HitTheMoleGame() {
           setGameStarted={setGameStarted}
           score={score}
           setScore={setScore}
+          time={time}
+          setTime={setTime}
         />
       ) : (
-        <MenuView setGameStarted={setGameStarted} />
+        <MenuView setTime={setTime} setGameStarted={setGameStarted} />
       )}
       {/* <ResultView result={result} /> */}
       {isGameStarted && <Playground score={score} setScore={setScore} />}

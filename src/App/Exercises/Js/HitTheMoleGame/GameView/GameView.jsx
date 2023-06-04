@@ -1,22 +1,26 @@
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 import './GameView.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export const GameView = ({ setGameStarted, score, setScore }) => {
-  const [counter, setCounter] = useState(60);
-
+export const GameView = ({
+  setGameStarted,
+  score,
+  setScore,
+  setTime,
+  time,
+}) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      counter > 0 && setCounter(counter - 1);
+      time > 0 && setTime(time - 1);
     }, 1000);
     return () => clearTimeout(timeoutId);
-  }, [counter]);
+  }, [time]);
 
   return (
     <>
       <Menu label="Czas do końca">
-        <div className="value-field">{counter}</div>
+        <div className="value-field">{time}</div>
       </Menu>
 
       <Menu label="Wynik">
