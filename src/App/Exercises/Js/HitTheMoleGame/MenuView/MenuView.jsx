@@ -73,10 +73,13 @@ export const MenuView = ({
   initialTime,
   score,
   setScore,
+  isGameStopped,
 }) => {
   return (
     <>
-      {time === 0 && <Result score={score} time={initialTime} />}
+      {(time === 0 || isGameStopped) && (
+        <Result score={score} resultTime={initialTime - time} />
+      )}
       <Menu label="Czas gry">
         <SelectButtons
           setOptionChosen={setTime}

@@ -15,6 +15,7 @@ export function HitTheMoleGame() {
   const [score, setScore] = useState(0);
   const [time, setTime] = useState(60);
   const [initialTime, setInitialTime] = useState(60);
+  const [isGameStopped, setGameStopped] = useState(false);
 
   useEffect(() => {
     time === 0 && setGameStarted(false);
@@ -35,17 +36,19 @@ export function HitTheMoleGame() {
           setScore={setScore}
           time={time}
           setTime={setTime}
-          isGameStarted={isGameStarted}
+          isGameStopped={isGameStopped}
+          setGameStopped={setGameStopped}
         />
       ) : (
         <MenuView
           time={time}
-          initialTime={initialTime}
-          score={score}
-          setGameStarted={setGameStarted}
           setTime={setTime}
-          setInitialTime={setInitialTime}
+          setGameStarted={setGameStarted}
           setScore={setScore}
+          score={score}
+          initialTime={initialTime}
+          setInitialTime={setInitialTime}
+          isGameStopped={isGameStopped}
         />
       )}
       {isGameStarted && <Playground score={score} setScore={setScore} />}
