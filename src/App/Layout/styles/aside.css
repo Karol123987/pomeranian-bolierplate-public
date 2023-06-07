@@ -1,7 +1,7 @@
 aside {
   border-right: 1px solid var(--color-grey);
   padding: 1rem;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: auto;
@@ -9,11 +9,15 @@ aside {
 
 aside ul {
   /* Nadpisanie domyślnych styli przeglądarki */
-  padding-inline-start: 1rem;
+  padding-inline-start: 0.5rem;
+  list-style-type: none;
 }
 
 aside li {
   line-height: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .aside-row {
@@ -30,4 +34,5 @@ aside li a {
 aside a.active {
   background-color: var(--color-primary-blue);
   color: var(--color-white);
+  border-radius: 12%;
 }

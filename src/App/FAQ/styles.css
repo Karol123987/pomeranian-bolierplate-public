@@ -1,40 +1,73 @@
 .FAQ {
-    color: black;
+  color: black;
 }
 
 .naglowek {
-    color:black;
-    font-style: normal;
+  color: black;
+}
+
+h3 {
+  font-size: large;
 }
 
 .box {
-    border: 1px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    max-width: 900px;
-    max-height:fit-content;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px 24px;
-    margin: 18px;
-    -webkit-box-shadow: 18px 8px 24px 0px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 18px 8px 24px 0px rgba(66, 68, 90, 1);
-    box-shadow: 18px 8px 24px 0px rgba(66, 68, 90, 1);
-    align-self: stretch;
+  border: 1px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 900px;
+  max-height: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px 24px;
+  margin: 18px;
+  -webkit-box-shadow: 24px 24px 11px -8px rgba(66, 68, 90, 0.5);
+  -moz-box-shadow: 24px 24px 11px -8px rgba(66, 68, 90, 0.5);
+  box-shadow: 24px 24px 11px -8px rgba(66, 68, 90, 0.5);
+  align-self: stretch;
 }
-.button{
-    
-    animation-name: rotating_arrow;
-    animation-duration: initial;
-    animation-iteration-count:infinite;
+
+.box .line {
+  width: 820px;
+  border: 1px solid #ebebeb;
+}
+
+.buttonFaq {
+  transition: transform 0.3s ease;
+  border: none;
+  background-color: white;
+}
+
+.rotated {
+  transform: rotate(-90deg);
+}
+
+.imageFaq {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.buttonFaqText {
+  border: none;
+  background-color: white;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+}
+
+/* 
+.button {
+  animation-name: rotating_arrow;
+  animation-duration: initial;
+  animation-iteration-count: infinite;
+  transform: rotate(0);
+}
+@keyframes blinking_arrow {
+  0% {
     transform: rotate(0);
   }
-@keyframes blinking_arrow {
-    0% {
-        transform: rotate(0);
-    }
-       
-    100% {
-     transform: rotate(45%);
-    }
-}
+
+  100% {
+    transform: rotate(45%);
+  }
+} */

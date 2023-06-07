@@ -2,6 +2,7 @@ import './styles.css';
 import { useState } from 'react';
 import { GameView } from './GameView/GameView';
 import { MenuView } from './MenuView/MenuView';
+
 // import { useEffect } from 'react';
 // import { Playground } from './Playuground/Playuground';
 
