@@ -53,6 +53,8 @@ export const GameView = ({
   setScore,
   setTime,
   time,
+  setGameStopped,
+  isGameStopped,
 }) => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -75,9 +77,10 @@ export const GameView = ({
         <Button
           onClick={() => {
             setGameStarted(false);
+            setGameStopped(true);
           }}
         >
-          Stop
+          STOP
         </Button>
       </Menu>
     </>

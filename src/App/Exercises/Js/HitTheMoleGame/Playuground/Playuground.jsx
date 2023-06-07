@@ -85,7 +85,7 @@ export const Playground = ({ score, setScore }) => {
   useEffect(() => {
     setInterval(() => {
       setFieldWithMoleId(getRandomInt(10));
-    }, 1000);
+    }, 800);
   }, []);
 
   return (
