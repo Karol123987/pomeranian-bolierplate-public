@@ -2,8 +2,8 @@
   padding-top: 5rem;
 }
 .dashboard .dashboard-about-me .person {
-  background: url(http://placekitten.com/500/500) no-repeat center center;
-  background-size: 11rem;
+  background: url('../../Images/Karol_Prusek_foto_1.jpg') no-repeat;
+  background-size: 7rem;
   border-radius: 50%;
   height: 7rem;
   width: 7rem;

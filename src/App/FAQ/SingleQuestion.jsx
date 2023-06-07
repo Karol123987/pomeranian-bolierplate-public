@@ -15,13 +15,21 @@ export const SingleQuestion = (props) => {
 
   return (
     <div className="box">
-      <h2 className="naglowek">
-        <button onClick={clickHandler}>
-          <Vector />
-        </button>{' '}
-        {question}
-      </h2>
-      <hr />
+      <h3 className="naglowek">
+        <button
+          className={`buttonFaq ${isTrue ? 'rotated' : ''}`}
+          onClick={clickHandler}
+        >
+          <Vector className="imageFaq" />
+        </button>
+        <button
+          className={`buttonFaqText ${isTrue ? 'open' : ''}`}
+          onClick={clickHandler}
+        >
+          {question}
+        </button>
+      </h3>
+      <hr className="line" />
       <p className="answer">{!isTrue && answer}</p>
     </div>
   );
