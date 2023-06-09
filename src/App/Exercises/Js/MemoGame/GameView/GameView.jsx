@@ -2,11 +2,19 @@ import './GameView.css';
 import { Button } from '../Button/Button';
 import { Menu } from '../Menu/Menu';
 
-export const GameView = () => {
+export const GameView = ({ setGameStarted }) => {
   return (
     <>
       <Menu label="czas gry">
-        <button isDisable={true}>1:35</button>
+        <Button isDisable={true}>1:35</Button>
+      </Menu>
+      <Menu label="liczba ruchów">
+        <Button isDisable={true}>2</Button>
+      </Menu>
+      <Menu label="przyciski sterujące">
+        <Button isDisable={true} onClick={() => setGameStarted(false)}>
+          STOP
+        </Button>
       </Menu>
     </>
   );
