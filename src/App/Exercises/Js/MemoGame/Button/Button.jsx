@@ -1,7 +1,7 @@
 import './style.css';
 
 export const Button = ({ onClick, children, isDisabled, isActive }) => {
-  const activeClass = isActive ? 'active' : '';
+  const activeClass = isActive ? 'button-active' : '';
 
   return (
     <button
