@@ -1,0 +1,65 @@
+.buttonAdd {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 36px;
+  gap: 16px;
+  width: 163px;
+  height: 56px;
+  background: #fe3756;
+  border: 1px solid #fe3756;
+  border-radius: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 31px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 0 5px #0a5279;
+  margin-top: 38px;
+}
+.buttonAdd:hover {
+  background-color: #106a9a;
+  cursor: pointer;
+}
+
+.buttonAdd-active {
+  background-color: #16a53a;
+}
+
+.buttonAdd:disabled {
+  background-color: gray;
+  cursor: initial;
+}
+
+.nick {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  color: #222222;
+  display: flex;
+}
+
+.input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 16px;
+  gap: 10px;
+  width: 285px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #c8cbd1;
+  border-radius: 5px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin-left: 50px;
+}
