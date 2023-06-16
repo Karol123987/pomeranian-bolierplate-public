@@ -79,6 +79,7 @@ export function SavedInput() {
     const count = idCounter + 1;
 
     sendToLocalStorage(newList, count);
+    setCurrentName('');
   };
 
   const changeValue = (e) => {
@@ -91,9 +92,16 @@ export function SavedInput() {
     sendToLocalStorage(newList, idCounter);
   };
 
+  const handleFormKeyPress = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      document.getElementById('addButton').click();
+    }
+  };
+
   return (
     <div className="saved-input-container">
-      <form onSubmit={addPerson}>
+      <form onSubmit={addPerson} onKeyDown={handleFormKeyPress}>
         <div className="left-part">
           <div className="nick-input-row">
             <p>NICK</p>
@@ -103,9 +111,12 @@ export function SavedInput() {
               placeholder="Podaj swój nick"
               autoFocus
               onChange={changeValue}
+              value={currentName}
             />
           </div>
-          <button type="submit">DODAJ</button>
+          <button type="submit" id="addButton">
+            DODAJ
+          </button>
         </div>
       </form>
       <div className="list">
