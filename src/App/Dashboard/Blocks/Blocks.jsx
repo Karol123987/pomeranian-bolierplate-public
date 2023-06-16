@@ -51,7 +51,11 @@ export const Blocks = () => {
           <p className="dashboard-tile-description">
             Stack technologiczny realizowany na kursie
           </p>
-          <p className="dashboard-tile-description">zobacz więcej</p>
+          <p className="dashboard-tile-description">
+            <a href="http://localhost:3000/dashboard/tech-stack">
+              zobacz więcej
+            </a>
+          </p>
           {/* <SeeMoreLink to="tech-stack" /> */}
         </div>
         <div>
