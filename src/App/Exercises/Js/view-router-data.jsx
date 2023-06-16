@@ -15,6 +15,7 @@ import { blockRouterMetaData as blockRouterMetaDataMemoGame } from './MemoGame/r
 import { blockRouterMetaData as blockRouterMetaDataSavedInput } from './SavedInput/router-data';
 import { blockRouterMetaData as blockRouterMetaDataExerciseOop } from './exercise-oop/router-data';
 import { blockRouterMetaData as blockRouterMetaDataTryCatchExercise } from './TryCatchExercise/router-data';
+import { blockRouterMetaData as blockRouterMetaDataExerciseJsPromises } from './Exercise-js-promises/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -32,5 +33,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataSavedInput,
   blockRouterMetaDataExerciseOop,
   blockRouterMetaDataTryCatchExercise,
+  blockRouterMetaDataExerciseJsPromises,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
