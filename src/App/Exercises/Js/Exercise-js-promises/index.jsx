@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './styles.css';
 import { useState } from 'react';
+import { ApiSymulationSuccess } from './ApiSymulationSuccess/ApiSymulationSuccess';
 
 export function Exercise({ parameterToEffect }) {
   // const [getState, setState] = useState(null);
@@ -55,6 +56,7 @@ export function Exercise({ parameterToEffect }) {
   return (
     <div className="playing-with-js-promises">
       <p>Promises</p>
+      <ApiSymulationSuccess />
     </div>
   );
 }
