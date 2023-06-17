@@ -17,6 +17,9 @@ import { blockRouterMetaData as blockRouterMetaDataExerciseOop } from './exercis
 import { blockRouterMetaData as blockRouterMetaDataTryCatchExercise } from './TryCatchExercise/router-data';
 import { blockRouterMetaData as blockRouterMetaDataExerciseJsPromises } from './Exercise-js-promises/router-data';
 import { blockRouterMetaData as blockRouterMetaDataExerciseJsPromiseUseEffect } from './Exercise-js-promise-use-effect/router-data';
+import { blockRouterMetaData as blockRouterMetaDataAsyncAwaitMeAndYou } from './AsyncAwaitMeAndYou/router-data';
+import { blockRouterMetaData as blockRouterMetaDataPromiseUsage } from './PromiseUsage/router-data';
+import { blockRouterMetaData as blockRouterMetaDataPromiseUsageMethods } from './PromiseUsageMethods/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -36,5 +39,8 @@ export const blockRouterMetaData = [
   blockRouterMetaDataTryCatchExercise,
   blockRouterMetaDataExerciseJsPromises,
   blockRouterMetaDataExerciseJsPromiseUseEffect,
+  blockRouterMetaDataAsyncAwaitMeAndYou,
+  blockRouterMetaDataPromiseUsage,
+  blockRouterMetaDataPromiseUsageMethods,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
