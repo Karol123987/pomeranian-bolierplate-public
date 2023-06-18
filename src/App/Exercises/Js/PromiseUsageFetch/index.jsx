@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './styles.css';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 // const getData = async () => {
 //   const response = await fetch("http://localhost:3333/api/todo");
