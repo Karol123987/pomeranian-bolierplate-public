@@ -1,66 +1,84 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import './styles.css';
+import { ToDoElement } from './TODO';
+import { useState } from 'react';
+const API_URL = 'http://localhost:3333/api';
 
 export function Exercise() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: 'Zamówić catering',
-      person: 'Karol ',
-      data: '18.06.2023, 11:50',
-      note: 'Dla mnie wege, dla Pauliny ryba + wege. Zrobić zamówienie, zapłacić.',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Kupić spray na kleszcze',
-      person: 'Karol ',
-      data: '18.06.2023, 11:50',
-      note: 'Pamiętać, żeby sprawdzić skład i termin ważności preparatu. Zadzwonić do weta, żeby się upewnić, czy mają na stanie.',
-      completed: false,
-    },
-    {
-      id: 3,
-      title: 'Szczepienie kitku',
-      person: 'Karol ',
-      data: '18.06.2023, 11:50',
-      note: 'Sprawdzić w książeczce zdrowia, kiedy Nala była ostatni raz szczepiona i umówić się z naszym weterynarzem.',
-      completed: false,
-    },
-  ]);
+  const [data, setData] = useState([]);
+  const [errorList, setErrorList] = useState([]);
 
-  const handleCheckboxChange = (id) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        return { ...todo, completed: !todo.completed };
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
+  const getData = async () => {
+    const resp = await fetch(`${API_URL}/todo`);
+    const jsonData = await resp.json();
+    console.log(jsonData, 'to dane z serwera');
+    setData(jsonData);
   };
+
+  const deleteToDo = async (id) => {
+    console.log('sprawdzanie funkcji');
+    const response = await fetch(`${API_URL}/todo/${id}`, {
+      method: 'DELETE',
+      headers: { 'Content-type': 'application/json' },
+    });
+    const { status } = await response;
+    if (status === 200) {
+      getData();
+    } else if (status === 500 || status === 404) {
+      console.log('status 400 lub 500');
+      setErrorList((prevErrorList) => [...prevErrorList, id]);
+      console.log(errorList, 'newErrorList');
+    }
+  };
+
+  // const data = [
+  //   {
+  //     id: 8,
+  //     title: 'Todo 8',
+  //     note: 'notatka 1',
+  //     author: 'Karol1',
+  //     isDone: false,
+  //   },
+  //   {
+  //     id: 9,
+  //     title: 'Todo 9',
+  //     note: 'notatka 2',
+  //     author: 'Karol2',
+  //     isDone: false,
+  //   },
+  //   {
+  //     id: 10,
+  //     title: 'Todo 10',
+  //     note: 'notatka 3',
+  //     author: 'Karol3',
+  //     isDone: false,
+  //   },
+  // ];
+
+  useEffect(() => {
+    console.log(errorList, 'newErrorListUseEffect');
+  }, [errorList]);
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   return (
     <div>
-      <h3>TODO</h3>
-      <div>
-        <ul className="list_todo">
-          {todos.map((todo) => (
-            <li className="box_todo" key={todo.id}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => handleCheckboxChange(todo.id)}
-                />
-                {todo.title}
-                {todo.person}
-                {todo.data}
-                {todo.note}
-              </label>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <p className="todopar">Tutaj znajdziesz listę swoich zadań.</p>
+      {data.map((element) => {
+        const isError = errorList.includes(element.id);
+        return (
+          <ToDoElement
+            label={element.title}
+            author={element.author}
+            note={element.note}
+            deleteToDo={deleteToDo}
+            id={element.id}
+            isError={isError}
+          />
+        );
+      })}
     </div>
   );
 }
