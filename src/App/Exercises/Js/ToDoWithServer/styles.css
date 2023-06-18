@@ -1,0 +1,18 @@
+.list_todo {
+  list-style-type: none;
+}
+.box_todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 24px;
+  gap: 16px;
+  width: 629px;
+  height: 166px;
+  width: 629px;
+  height: 166px;
+  border-left: 5px solid #c8cbd1;
+  box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.12), 0px 3px 9px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin: 26px;
+}
