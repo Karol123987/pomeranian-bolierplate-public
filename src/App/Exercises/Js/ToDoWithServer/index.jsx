@@ -70,7 +70,7 @@ export function Exercise() {
         const isError = errorList.includes(element.id);
         return (
           <ToDoElement
-            label={element.title}
+            title={element.title}
             author={element.author}
             note={element.note}
             deleteToDo={deleteToDo}
