@@ -1,8 +1,8 @@
-import './styles.css';
-import { useEffect, useState } from 'react';
-import { GameView } from './GameView/GameView';
-import { MenuView } from './MenuView/MenuView';
-import { Playground } from './Playuground/Playuground';
+import "./styles.css";
+import { useEffect, useState } from "react";
+import { GameView } from "./GameView/GameView";
+import { MenuView } from "./MenuView/MenuView";
+import { Playground } from "./Playuground/Playuground";
 
 export function MemoGame() {
   const [isGameStarted, setGameStarted] = useState(false);
