@@ -10,7 +10,9 @@ export function EmptyTaskList({ addTask, isError, getData }) {
   return (
     <div>
       <p>{text}</p>
-      <button onClick={action}>{textButton}</button>
+      <button className="addTask" onClick={action}>
+        {textButton}
+      </button>
     </div>
   );
 }
