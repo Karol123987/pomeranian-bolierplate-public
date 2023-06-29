@@ -7,11 +7,6 @@
 .task-list {
   display: flex;
   flex-direction: column;
-}
-
-.task-list {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
@@ -71,5 +66,11 @@
   width: 30px;
 }
 
-/* .button-delete {
-} */
+.button-delete {
+  display: flex;
+  flex-direction: initial;
+  justify-content: flex-end;
+  cursor: pointer;
+  border: none;
+  /* background-color: white; */
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./AddTask.css";
-import { API_URL, FORM_SCHEMA } from "../constants";
+import { FORM_SCHEMA } from "../constants";
 import { requestHandler } from "../helpers";
 
 export function AddTask({

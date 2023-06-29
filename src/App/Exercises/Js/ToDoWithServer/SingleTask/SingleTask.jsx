@@ -1,4 +1,5 @@
 import "./SingleTask.css";
+import { ReactComponent as Kosz } from "../../../../Images/kosz.svg";
 
 import { parseDate } from "../helpers.js";
 
@@ -29,12 +30,12 @@ export function SingleTask(props) {
           <p>{note}</p>
           {isError && <p>Nie da się usunąć elementu</p>}
           <button
+            className="button-delete"
             onClick={() => {
               deleteToDo(id);
             }}
-            className="button-delete"
           >
-            USUŃ
+            <Kosz />
           </button>
           <button
             onClick={() => {

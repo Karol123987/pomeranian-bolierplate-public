@@ -1,10 +1,10 @@
-import { ReactComponent as Hand } from '..//..//Components/Icons/Hand.svg';
-import { ReactComponent as Personalcard } from '..//..//Components/Icons/Personalcard.svg';
-import { ReactComponent as Folder } from '..//..//Components/Icons/folder-2.svg';
-import { ReactComponent as Edit } from '..//..//Components/Icons/edit.svg';
-import { ReactComponent as Teacher } from '..//..//Components/Icons/teacher.svg';
-import { ReactComponent as Code } from '..//..//Components/Icons/code.svg';
-import { ReactComponent as Status } from '..//..//Components/Icons/status-up.svg';
+import { ReactComponent as Hand } from "..//..//Components/Icons/Hand.svg";
+import { ReactComponent as Personalcard } from "..//..//Components/Icons/Personalcard.svg";
+import { ReactComponent as Folder } from "..//..//Components/Icons/folder-2.svg";
+import { ReactComponent as Edit } from "..//..//Components/Icons/edit.svg";
+import { ReactComponent as Teacher } from "..//..//Components/Icons/teacher.svg";
+import { ReactComponent as Code } from "..//..//Components/Icons/code.svg";
+import { ReactComponent as Status } from "..//..//Components/Icons/status-up.svg";
 
 // export function Blocks (){
 export const Blocks = () => {
