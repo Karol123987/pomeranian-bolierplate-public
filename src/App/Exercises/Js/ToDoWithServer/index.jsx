@@ -6,6 +6,7 @@ import { AddTask } from "./AddTask/AddTask";
 import { API_URL, FORM_SCHEMA } from "./constants";
 import { EmptyTaskList } from "./EmptyTaskList/EmptyTaskList";
 import { requestHandler, setStateAsync } from "./helpers";
+import { ReactComponent as Plus } from "../../../Images/Plus.svg";
 
 export function ToDoWithServer() {
   const [isError, setIsError] = useState(false);
@@ -79,7 +80,7 @@ export function ToDoWithServer() {
         }
       })
       .catch(() => {
-        setIsToDoError(true);
+        setIsToDoError(false);
         setErrorIds((prevState) => [...prevState, id]);
       });
   };
@@ -98,8 +99,8 @@ export function ToDoWithServer() {
         <>
           <h3> TODO</h3>
           <p>Tutaj znajdziesz listę swoich zadań</p>
-          <button className="button-add" onClick={handleIsForm}>
-            DODAJ
+          <button className="button-add-plus" onClick={handleIsForm}>
+            <Plus />
           </button>
         </>
       )}

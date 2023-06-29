@@ -11,6 +11,8 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(7, 10rem);
+  justify-items: center;
+  text-align: center;
 }
 .dashboard .dashboard-tech-stack-flex img {
   align-items: center;

@@ -1,5 +1,5 @@
-import './styles.css';
-import React from 'react';
+import "./styles.css";
+import React from "react";
 
 export function Exercise() {
   // ZADANIE 1 (SORTOWANIE TABLICY)
@@ -13,9 +13,9 @@ export function Exercise() {
 
   // ZADANIE 2 (OPCJA_1) (ZMIANA WIELKOŚCI PIERWSZEJ LITERY Z MAŁEJ NA WIELKA )
   const originalObject = {
-    name: 'john',
-    surname: 'wick',
-    age: '1000',
+    name: "john",
+    surname: "wick",
+    age: "1000",
   };
 
   const upperObject = (object) => {
@@ -45,8 +45,8 @@ export function Exercise() {
 
   // ZADANIE 3
   const tablicaPierwotna = [
-    { id: 0, name: 'Eve', grades: [4, 2, 4, 6, 1] },
-    { id: 1, name: 'Eve 1', grades: [3, 2, 4, 2, 1] },
+    { id: 0, name: "Eve", grades: [4, 2, 4, 6, 1] },
+    { id: 1, name: "Eve 1", grades: [3, 2, 4, 2, 1] },
   ];
 
   //(OPCJA 1)
@@ -67,8 +67,8 @@ export function Exercise() {
   // ZADANIE 3 (OPCJA 2)
 
   const tablicaPierwotna2 = [
-    { id: 0, name: 'Eve', grades: [4, 2, 4, 6, 1] },
-    { id: 1, name: 'Eve 1', grades: [3, 2, 4, 2, 1] },
+    { id: 0, name: "Eve", grades: [4, 2, 4, 6, 1] },
+    { id: 1, name: "Eve 1", grades: [3, 2, 4, 2, 1] },
   ];
   const calcAvr2 = (peopleArr) => {
     const returnArr = [];
@@ -102,17 +102,17 @@ export function Exercise() {
   function sumOfParam(...args) {
     let total = 0;
     for (let i = 0; i < args.length; i++) {
-      if (typeof args[i] === 'number' && !isNaN(args[i])) {
+      if (typeof args[i] === "number" && !isNaN(args[i])) {
         total += args[i];
       } else {
-        return 'złe wejście';
+        return "złe wejście";
       }
     }
     return total;
   }
 
   console.log(sumOfParam(1, 2, 3, 4, 5, 6));
-  console.log(sumOfParam(1, 2, 3, 'not a number', 5, 6));
+  console.log(sumOfParam(1, 2, 3, "not a number", 5, 6));
 
   // ZADANIE 6
 
@@ -125,7 +125,7 @@ export function Exercise() {
         }
       }
       if (count === 0) {
-        return 'złe wejście';
+        return "złe wejście";
       } else {
         return count;
       }
@@ -134,26 +134,26 @@ export function Exercise() {
 
   const countOne = ZliczWystapienia(1);
   console.log(countOne(1, 1, 2, 3, 5, 7, 8, 1));
-  console.log(countOne(1, 1, 1, 2, 3, 'cokolwiek', {}, [], 1));
+  console.log(countOne(1, 1, 1, 2, 3, "cokolwiek", {}, [], 1));
 
-  const countNotANumber = ZliczWystapienia('nie liczba');
+  const countNotANumber = ZliczWystapienia("nie liczba");
   console.log(countNotANumber(1, 1, 2, 3, 5, 7, 8, 1));
 
   return (
     <div>
       Funkcje w JS
-      <div>{orginalArr.join('-')}</div>
-      <div>{sortedArr.join('-')}</div>
+      <div>{orginalArr.join("-")}</div>
+      <div>{sortedArr.join("-")}</div>
       <div>
-        {'originalObject: ' +
+        {"originalObject: " +
           originalObject.name +
-          ' ' +
+          " " +
           originalObject.surname}
       </div>
       <div>
-        {'changedObject: ' + changedObject.name + ' ' + changedObject.surname}
+        {"changedObject: " + changedObject.name + " " + changedObject.surname}
         <br />
-        {'ZAD 5 ---> ' + sumOfParam(1, 2, 3, 4, 5, 6)}
+        {"ZAD 5 ---> " + sumOfParam(1, 2, 3, 4, 5, 6)}
         <br />
         {Object.entries(originalObject).map(([key, value]) => (
           <p key={key}>{`${key}: ${value}`}</p>

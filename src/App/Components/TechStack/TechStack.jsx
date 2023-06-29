@@ -1,26 +1,26 @@
-import './styles.css';
-import { Link } from 'react-router-dom';
-import jsSvg from '../../Images/tech-stack/js.svg';
-import html from '../../Images/tech-stack/html.svg';
-import vector from '../../Images/tech-stack/Vector.svg';
-import ts from '../../Images/tech-stack/ts.svg';
-import react from '../../Images/tech-stack/react.svg';
-import github from '../../Images/tech-stack/githuub.svg';
-import firebase from '../../Images/tech-stack/firebase.svg';
-import jira from '../../Images/tech-stack/jira.svg';
-import bitbucket from '../../Images/tech-stack/bitbucket.svg';
-import redux from '../../Images/tech-stack/redux.svg';
-import discord from '../../Images/tech-stack/discord.svg';
-import vscode from '../../Images/tech-stack/vscode.svg';
-import redmine from '../../Images/tech-stack/redmine.svg';
-import git from '../../Images/tech-stack/git.svg';
+import "./styles.css";
+import { Link } from "react-router-dom";
+import jsSvg from "../../Images/tech-stack/js.svg";
+import html from "../../Images/tech-stack/html.svg";
+import vector from "../../Images/tech-stack/Vector.svg";
+import ts from "../../Images/tech-stack/ts.svg";
+import react from "../../Images/tech-stack/react.svg";
+import github from "../../Images/tech-stack/githuub.svg";
+import firebase from "../../Images/tech-stack/firebase.svg";
+import jira from "../../Images/tech-stack/jira.svg";
+import bitbucket from "../../Images/tech-stack/bitbucket.svg";
+import redux from "../../Images/tech-stack/redux.svg";
+import discord from "../../Images/tech-stack/discord.svg";
+import vscode from "../../Images/tech-stack/vscode.svg";
+import redmine from "../../Images/tech-stack/redmine.svg";
+import git from "../../Images/tech-stack/git.svg";
 
 export const TechStack = () => {
   return (
     <div className="dashboard">
       <div className="dashboard-tech-stack-container">
         <Link to=".." relative="path">
-          {'< Tech stack'}
+          {"< Tech stack"}
         </Link>
         <p>
           Poniżej znajdziesz tech stack oraz nadzędzia, jakich nauczylem się

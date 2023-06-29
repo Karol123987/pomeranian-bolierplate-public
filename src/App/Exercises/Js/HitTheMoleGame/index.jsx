@@ -1,8 +1,8 @@
-import './styles.css';
-import { useEffect, useState } from 'react';
-import { GameView } from './GameView/GameView';
-import { Playground } from './Playuground/Playuground';
-import { MenuView } from './MenuView/MenuView';
+import "./styles.css";
+import { useEffect, useState } from "react";
+import { GameView } from "./GameView/GameView";
+import { Playground } from "./Playuground/Playuground";
+import { MenuView } from "./MenuView/MenuView";
 
 export function HitTheMoleGame() {
   const [isGameStarted, setGameStarted] = useState(false);

@@ -1,4 +1,7 @@
 import "./SingleTask.css";
+import { ReactComponent as Kosz } from "../../../../Images/kosz.svg";
+import { ReactComponent as Edit } from "../../../../Images/Edit.svg";
+import { ReactComponent as Check } from "../../../../Images/Check.svg";
 
 import { parseDate } from "../helpers.js";
 
@@ -23,35 +26,38 @@ export function SingleTask(props) {
         <div className="task-single">
           <div className="task-row-title">
             <h3>{title}</h3>
+            <button
+              className="button-delete"
+              onClick={() => {
+                deleteToDo(id);
+              }}
+            >
+              <Kosz />
+            </button>
           </div>
           <p>{author}</p>
-          <p>{name}</p>
-          <p>{note}</p>
-          {isError && <p>Nie da się usunąć elementu</p>}
           <button
-            onClick={() => {
-              deleteToDo(id);
-            }}
-            className="button-delete"
-          >
-            USUŃ
-          </button>
-          <button
+            className="button-edit"
             onClick={() => {
               handleEditTask(id);
             }}
           >
-            EDYTUJ
+            <Edit />
           </button>
+          <p>{name}</p>
+          <p>{note}</p>
+
           {!isDone && (
             <button
+              className="button-check"
               onClick={() => {
                 markAsDone(id);
               }}
             >
-              ZAKOŃCZ
+              <Check />
             </button>
           )}
+          {isError && <p>Nie da się usunąć elementu</p>}
           {isDone && <p>Zakończone {parseDate(doneDate)}</p>}
         </div>
       </div>

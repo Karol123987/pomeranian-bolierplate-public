@@ -1,8 +1,8 @@
-import { Button } from '../Button/Button';
-import { Menu } from '../Menu/Menu';
-import { SelectButtons } from '../SelectButtons/SelectButtons';
-import './MenuView.css';
-import { Result } from '../ResultView/ResultView';
+import { Button } from "../Button/Button";
+import { Menu } from "../Menu/Menu";
+import { SelectButtons } from "../SelectButtons/SelectButtons";
+import "./MenuView.css";
+import { Result } from "../ResultView/ResultView";
 
 export const MenuView = ({
   setGameStarted,
@@ -25,17 +25,17 @@ export const MenuView = ({
           setInitialTime={setInitialTime}
           options={[
             {
-              label: '1 minuta',
+              label: "1 minuta",
               isActive: true,
               value: 1,
             },
             {
-              label: '2 minuty',
+              label: "2 minuty",
               isActive: false,
               value: 2,
             },
             {
-              label: '3 minuty',
+              label: "3 minuty",
               isActive: false,
               value: 3,
             },
@@ -47,17 +47,17 @@ export const MenuView = ({
         <SelectButtons
           options={[
             {
-              label: '1 kret',
+              label: "1 kret",
               isActive: true,
               value: 1,
             },
             {
-              label: '2 krety',
+              label: "2 krety",
               isActive: false,
               value: 2,
             },
             {
-              label: '3 krety',
+              label: "3 krety",
               isActive: false,
               value: 3,
             },
