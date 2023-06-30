@@ -48,7 +48,6 @@ export const requestHandler = async (selectedMethod, id, data) => {
       reject(jsonResponse)
     }
 
-
     // ------------- INNA WERSJA ----------------------------
     // if (response.status !== 200 && jsonResponse.message) {
     //     reject(jsonResponse)
