@@ -1,16 +1,16 @@
-import React from 'react';
-import { Route, Routes, useLocation, useRoutes } from 'react-router-dom';
+import React from "react";
+import { Route, Routes, useLocation, useRoutes } from "react-router-dom";
 
-import { GoBackLink } from '../../Components/GoBack/GoBack';
-import { getRouterMetaDataByCurrentPath } from '../../router-data/getRouterMetaDataByCurrentPath';
+import { GoBackLink } from "../../Components/GoBack/GoBack";
+import { getRouterMetaDataByCurrentPath } from "../../router-data/getRouterMetaDataByCurrentPath";
 
-import { ExerciseItemHeader } from '../ExerciseItemHeader';
+import { ExerciseItemHeader } from "../ExerciseItemHeader";
 
-import { ExerciseLinks } from './ExerciseLinks';
+import { ExerciseLinks } from "./ExerciseLinks";
 import {
   blockRouterData as jsBlockRouterData,
   blockRouterMetaData as jsBlockRouterMetaData,
-} from './view-router-data';
+} from "./view-router-data";
 
 export function JsExercises() {
   const element = useRoutes(jsBlockRouterData);

@@ -26,6 +26,7 @@ import { blockRouterMetaData as blockRouterMetaDataToDoWithServer } from "./ToDo
 import { blockRouterMetaData as blockRouterMetaDataUseRef } from "./UseRef/router-data";
 import { blockRouterMetaData as blockRouterMetaDataForms } from "./Forms/router-data";
 import { blockRouterMetaData as blockRouterMetaDataBasicForms } from "./BasicForms/router-data";
+import { blockRouterMetaData as blockRouterMetaDataRedux } from "./Redux/router-data";
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -54,5 +55,6 @@ export const blockRouterMetaData = [
   blockRouterMetaDataUseRef,
   blockRouterMetaDataForms,
   blockRouterMetaDataBasicForms,
+  blockRouterMetaDataRedux,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);
