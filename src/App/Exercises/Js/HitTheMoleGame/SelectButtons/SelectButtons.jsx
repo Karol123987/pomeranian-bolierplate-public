@@ -33,8 +33,8 @@
 //   );
 // };
 //----------------------------------------------------------------------
-import { Button } from '../Button/Button';
-import { useState } from 'react';
+import { Button } from "../Button/Button";
+import { useState } from "react";
 
 export const SelectButtons = ({ options, setOptionChosen, setInitialTime }) => {
   const [newOptions, setNewOptions] = useState(options);

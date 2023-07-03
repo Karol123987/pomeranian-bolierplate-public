@@ -1,6 +1,6 @@
 import { Redux } from "./Redux";
 
-export const blockRouterMetaData = {
+export const ReduxMetaData = {
   path: "Redux",
   date: "02-07-2023",
   linkLabel: "Redux",

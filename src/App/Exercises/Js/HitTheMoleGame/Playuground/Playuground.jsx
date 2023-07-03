@@ -1,6 +1,6 @@
-import './Playuground.css';
-import { ReactComponent as Mole } from '../../../../Images/Mole.svg';
-import { useEffect, useState } from 'react';
+import "./Playuground.css";
+import { ReactComponent as Mole } from "../../../../Images/Mole.svg";
+import { useEffect, useState } from "react";
 
 const fields = [
   {
@@ -93,9 +93,9 @@ export const Playground = ({ score, setScore }) => {
       {modifiedFields.map((field) => {
         const isMolePresent = field.id === fieldWithMoleId;
         const isClickedFieldWithMole =
-          isMolePresent && field.hasClicked ? 'field-green' : '';
+          isMolePresent && field.hasClicked ? "field-green" : "";
         const isClickedFieldWithoutMole =
-          !isMolePresent && field.hasClicked ? 'field-red' : '';
+          !isMolePresent && field.hasClicked ? "field-red" : "";
 
         return (
           <div
