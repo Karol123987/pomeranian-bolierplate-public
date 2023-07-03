@@ -24,9 +24,6 @@ import { blockRouterMetaData as blockRouterMetaDataPromiseMethodsTraining } from
 import { blockRouterMetaData as blockRouterMetaDataPromiseUsageFetch } from "./PromiseUsageFetch/router-data";
 import { blockRouterMetaData as blockRouterMetaDataToDoWithServer } from "./ToDoWithServer/router-data";
 import { blockRouterMetaData as blockRouterMetaDataUseRef } from "./UseRef/router-data";
-import { blockRouterMetaData as blockRouterMetaDataForms } from "./Forms/router-data";
-import { blockRouterMetaData as blockRouterMetaDataBasicForms } from "./BasicForms/router-data";
-import { blockRouterMetaData as blockRouterMetaDataRedux } from "./Redux/router-data";
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -53,8 +50,5 @@ export const blockRouterMetaData = [
   blockRouterMetaDataPromiseUsageFetch,
   blockRouterMetaDataToDoWithServer,
   blockRouterMetaDataUseRef,
-  blockRouterMetaDataForms,
-  blockRouterMetaDataBasicForms,
-  blockRouterMetaDataRedux,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

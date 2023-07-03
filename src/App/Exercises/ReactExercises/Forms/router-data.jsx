@@ -1,6 +1,6 @@
 import { Exercise } from "./index";
 
-export const blockRouterMetaData = {
+export const FormsMetaData = {
   path: "Forms",
   date: "30-06-2023",
   linkLabel: "Formularze - rozszerzenie wiedzy",
