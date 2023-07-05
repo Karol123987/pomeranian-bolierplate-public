@@ -50,7 +50,7 @@ export function Redux() {
       <button onClick={handleAdd}>Dodaj</button>
       <button onClick={handleDec}>Odejmij</button>
       <input onChange={hadleIncByVal} type="text" value={incrementValue} />
-      <button onClick={handleSubVal}>Dodaj {incrementValue}</button>
+      <button onClick={handleSubVal}>DODAJ {incrementValue}</button>
     </div>
   );
 }
