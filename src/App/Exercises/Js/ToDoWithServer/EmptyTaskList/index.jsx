@@ -1,4 +1,4 @@
-import "./EmptyTaskList.css";
+import "./styles.css";
 
 export function EmptyTaskList({ addTask, isError, getData }) {
   const text = isError

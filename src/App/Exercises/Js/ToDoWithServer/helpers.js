@@ -1,58 +1,57 @@
-import { json } from "react-router-dom";
 import { API_URL } from "./constants";
 
 export const parseDate = (date) => {
-    if (date) {
-      const dateObj = new Date(date);
-      const finalDate = `${dateObj.getDate()}.${dateObj.getMonth()}.${dateObj.getFullYear()}, ${dateObj.getHours()}:${dateObj.getMinutes()}`;
-      return finalDate;
-    } else {
-      return date;
-    } 
-  };
+  if (date) {
+    const dateObj = new Date(date);
+    const dateParsed = dateObj.getDate();
+    const monthParsed = dateObj.getMonth();
+    const yearParsed = dateObj.getFullYear();
+    const hoursParsed = dateObj.getHours();
+    const minutesParsed =
+      dateObj.getMinutes() !== 0 ? dateObj.getMinutes() : "00";
+
+    const finalDate = `${dateParsed}.${monthParsed}.${yearParsed}, ${hoursParsed}:${minutesParsed}`;
+
+    return finalDate;
+  } else {
+    return date;
+  }
+};
 
 export const setStateAsync = async (callback) => {
-  return new Promise(()=>{
-    callback() 
-  })
-}
+  return new Promise(() => {
+    callback();
+  });
+};
 
 export const requestHandler = async (selectedMethod, id, data) => {
-  console.log('id:', id)
-  return new Promise(async (resolve, reject)=>{
-    let endOfUrl = ''
+  return new Promise(async (resolve, reject) => {
+    let endOfUrl = "";
 
     if (id) {
-      endOfUrl = `/${id}`
-    }
-
-    if (id && selectedMethod==='PUT' && !!data) {
-      endOfUrl = `${endOfUrl}/markAsDone`
+      endOfUrl = `/${id}`;
     }
 
     const response = await fetch(`${API_URL}/todo${endOfUrl}`, {
       method: selectedMethod,
       headers: {
-        'Content-type': 'application/json',
+        "Content-type": "application/json",
       },
       body: JSON.stringify(data),
-    })
+    });
 
-    const jsonResponse = await response.json()
+    const jsonResponse = await response.json();
 
     if (response.status === 200) {
-      resolve(jsonResponse)
+      resolve(jsonResponse);
+    }
+
+    if (jsonResponse.message === "Server error") {
+      reject(jsonResponse);
     }
 
     if (response.status !== 200 && jsonResponse.message) {
-      reject(jsonResponse)
+      reject(jsonResponse);
     }
-
-    // ------------- INNA WERSJA ----------------------------
-    // if (response.status !== 200 && jsonResponse.message) {
-    //     reject(jsonResponse)
-    // } else {
-    //     resolve(jsonResponse)
-    //   }
-  })
-}
+  });
+};

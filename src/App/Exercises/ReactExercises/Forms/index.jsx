@@ -73,7 +73,7 @@ export function Exercise() {
         />
       </div>
 
-      <button type="submit">Wyślij</button>
+      <button type="submit">WYŚLIJ</button>
     </form>
   );
 }
