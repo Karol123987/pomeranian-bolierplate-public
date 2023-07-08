@@ -5,6 +5,7 @@ import { ReactComponent as Edit } from "..//..//Components/Icons/edit.svg";
 import { ReactComponent as Teacher } from "..//..//Components/Icons/teacher.svg";
 import { ReactComponent as Code } from "..//..//Components/Icons/code.svg";
 import { ReactComponent as Status } from "..//..//Components/Icons/status-up.svg";
+import { Link } from "react-router-dom";
 
 // export function Blocks (){
 export const Blocks = () => {
@@ -52,9 +53,7 @@ export const Blocks = () => {
             Stack technologiczny realizowany na kursie
           </p>
           <p className="dashboard-tile-description">
-            <a href="http://localhost:3000/dashboard/tech-stack">
-              zobacz więcej
-            </a>
+            <Link to="/dashboard/tech-stack">Zobacz więcej</Link>
           </p>
           {/* <SeeMoreLink to="tech-stack" /> */}
         </div>
