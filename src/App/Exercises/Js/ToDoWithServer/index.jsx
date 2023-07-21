@@ -3,9 +3,9 @@ import "./styles.css";
 import { useEffect, useState } from "react";
 import { ToDo } from "./ToDo";
 import { AddToDo } from "./AddToDo";
-import { EmptyTaskList } from "./EmptyTaskList";
+// import { EmptyTaskList } from "./EmptyTaskList";
 import { requestHandler } from "./helpers";
-import { ReactComponent as Plus } from "../../../Images/Plus.svg";
+// import { ReactComponent as Plus } from "../../../Images/Plus.svg";
 
 export function ToDoWithServer() {
   const [data, setData] = useState([]);
