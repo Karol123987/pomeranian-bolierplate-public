@@ -3,7 +3,7 @@
   padding-left: 20rem;
 }
 .dashboard .dashboard-about-me .person {
-  background: url('../../Images/Karol_Prusek_foto_1.jpg') no-repeat;
+  background: url("../../Images/Karol_Prusek_foto_1.jpg") no-repeat;
   background-size: 7rem;
   border-radius: 50%;
   height: 7rem;
