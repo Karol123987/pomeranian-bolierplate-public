@@ -1,9 +1,9 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import { routerData } from './router-data';
+import { routerData } from "./router-data";
 
-import './styles.css';
+import "./styles.css";
 
 export const BlockLayout = () => {
   const navigate = useNavigate();
