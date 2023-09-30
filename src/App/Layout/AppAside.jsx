@@ -1,13 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
-import './styles/aside.css';
-import { CalendarIcon } from '../Components/Icons/CalendarIcon';
-import { SettingIcon } from '../Components/Icons/SettingIcon';
-import { ReactComponent as Messages } from '../Components/Icons/Messages.svg';
-import { HouseIcon } from '../Components/Icons/HouseIcon';
-import { PersonalCardIcon } from '../Components/Icons/PersonalCardIcon';
-import { ElementIcon } from '../Components/Icons/ElementIcon';
-import { EditIcon } from '../Components/Icons/EditIcon';
+import "./styles/aside.css";
+import { CalendarIcon } from "../Components/Icons/CalendarIcon";
+import { SettingIcon } from "../Components/Icons/SettingIcon";
+import { ReactComponent as Messages } from "../Components/Icons/Messages.svg";
+import { HouseIcon } from "../Components/Icons/HouseIcon";
+import { PersonalCardIcon } from "../Components/Icons/PersonalCardIcon";
+import { ElementIcon } from "../Components/Icons/ElementIcon";
+import { EditIcon } from "../Components/Icons/EditIcon";
 
 export function AppAside() {
   return (
@@ -46,7 +46,7 @@ export function AppAside() {
           </li>
         </ul>
       </nav>
-      <p style={{ padding: '1rem 0' }}>Sidebar items, widgets, etc</p>
+      {/* <p style={{ padding: '1rem 0' }}>Sidebar items, widgets, etc</p> */}
     </aside>
   );
 }

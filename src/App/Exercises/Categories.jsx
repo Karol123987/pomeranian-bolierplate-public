@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import './categories.css';
+import "./categories.css";
 
 export const Categories = () => {
   return (
@@ -14,7 +14,7 @@ export const Categories = () => {
         <NavLink to="react">React - lista ćwiczeń</NavLink>
         <NavLink to="web-api">Web API - lista ćwiczeń</NavLink>
         <NavLink to="async">Asynchroniczność - lista ćwiczeń</NavLink>
-        <NavLink to="firebase">Firebase - lista ćwiczeń</NavLink>
+        {/* <NavLink to="firebase">Firebase - lista ćwiczeń</NavLink> */}
       </div>
     </>
   );
